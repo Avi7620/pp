@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///DATAAA.db"
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'your_secret_key'  # Set a secret key for flashing messages
 db = SQLAlchemy(app)
 
@@ -28,7 +28,7 @@ class Contact(db.Model):
 
 #--------------------------------------------------------------------- contacts -------------------------------------------------------------------
 
-@app.route('/contact', methods=['POST'])
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
         name = request.form['name']
@@ -83,7 +83,7 @@ def admin_login():
     else:
         return render_template('adminlogin.html')
      
-@app.route('/signup', methods=['POST'])
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
     username = request.form['txt']
     email = request.form['email']
