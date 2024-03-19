@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.PharmaAI</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://kit.fontawesome.com/382c9e01c9.js" crossorigin="anonymous"></script>
+    <style>
+        h2 {
+            font-size: 24px;
+            /* Adjust font size as needed */
+            color: #333;
+            /* Text color */
+            font-weight: bold;
+            /* Bold font weight */
+            text-align: center;
+            /* Center align text */
+            margin-top: 20px;
+            /* Add some top margin */
+            margin-bottom: 70px;
+            /* Add some bottom margin */
+        }
+
+        .logo {
+            height: 120px;
+            width: 120px;
+            /* Set width and height to make it circular */
+            border-radius: 80%;
+            /* Make it circular */
+            object-fit: cover;
+            /* Ensure the image covers the circular area */
+        }
+
+        .tab-tittle p {
+            font-weight: bold;
+        }
+
+        #home .home-col-1 {
+            width: 100%;
+            /* Ensure the container spans the full width of its parent */
+        }
+
+        #home .home-col-1 img {
+            width: 100%;
+            height: auto;
+            /* This ensures the aspect ratio is maintained */
+            display: block;
+            /* This ensures the image behaves as a block element */
+        }
+
+        .marquee-container {
+            overflow: hidden;
+        }
+
+        .marquee {
+            white-space: nowrap;
+            display: inline-block;
+        }
+
+        @keyframes marqueeAnimation {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .marquee-moving {
+            animation: marqueeAnimation 10s linear infinite;
+        }
+
+        .pharma {
+            background: linear-gradient(to right, rgb(91, 3, 60), rgb(223, 12, 160));
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block;
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+        }
+
+        .ai {
+            background: linear-gradient(to right, green, blue);
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block;
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+        }
+
+        .nexus {
+            background: linear-gradient(to right, purple, red);
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block;
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+        }
+
+        .logo-secondary {
+            height: 120px;
+            /* Adjust height as needed */
+            width: 320px;
+            /* Adjust width as needed */
+            margin-left: 0px;
+            /* Adjust margin-left for spacing between logos */
+            /* Add any other styles like positioning, alignment, etc. */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-back">
+
+        <div id="header">
+            <div class="container">
+
+                <nav>
+                    <!-- <img src="static/pp80.png" class="logo"> -->
+                    <img src="static/pp85.png" class="logo-secondary">
+                    <!-- <h1>
+                        <span class="pharma">P</span>
+                        <span class="pharma">h</span>
+                        <span class="pharma">a</span>
+                        <span class="pharma">r</span>
+                        <span class="pharma">m</span>
+                        <span class="pharma">a</span>
+                        <span class="ai"></span>
+                        <span class="ai">A</span>
+                        <span class="ai">I</span>
+                        <span class="ai"></span>
+                        <span class="nexus">N</span>
+                        <span class="nexus">e</span>
+                        <span class="nexus">x</span>
+                        <span class="nexus">u</span>
+                        <span class="nexus">s</span>
+                    </h1> -->
+                    <hr>
+                    <ul id="sidemenue">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+
+                        <li><a href="#Doctors">Developers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/adminlogin">Admin</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenue()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenue()"></i>
+                </nav>
+               
+
+                <!-- <div class="headertext">
+                    <h3>We the future of healthcare </h3>
+                    <h1>
+                        <span>Web-<span>medconsult</span></span>
+                    </h1>
+                </div>
+            </div> -->
+            </div>
+            <!-- <div id="home">
+            <div class="container">
+                <div class="row">
+                    <div class="home-col-1">
+                        <img src="static/pp54.png">
+                    </div>
+
+                </div>
+            </div>
+        </div> -->
+
+            <!--------------------------------------- ABOUT -------------------------------------->
+            <div id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="static/pp67.png">
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="sub-tittle">About us</h1><br>
+
+                            <p> Pharma AI Nexus is your gateway to a world of intelligent pharmacy solutions. We bring
+                                together a diverse range of software and AI tools designed to elevate every aspect of
+                                pharmacy practice. From personalized medication management to predictive analytics, our
+                                platform provides pharmacists with the tools they need to deliver exceptional care,
+                                improve efficiency, and stay ahead in a rapidly evolving industry. Join us at Pharma AI
+                                Nexus and revolutionize the way you do pharmacy.</p>
+                            <div class="tab-tittle">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Our Mission</p>
+                                <p class="tab-links" onclick="opentab('exprience')">Our Offerings</p>
+                                <p class="tab-links" onclick="opentab('education')">Our Approach To Healthcare</p>
+                            </div>
+
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span></span> Our mission at Pharma Ai Nexus is to revolutionize Pharmaceutical
+                                        Research through the power of artificial intelligence. We are committed to
+                                        leveraging cutting-edge technology to enhance patient care, streamline
+                                        processes, and drive innovation in the pharmaceutical industry. By harnessing
+                                        AI, we aim to empower healthcare professionals with actionable insights, improve
+                                        treatment outcomes, and ultimately contribute to a healthier, more sustainable
+                                        future for all.</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="exprience">
+                                <ul>
+                                    <li>Drug Discovery and Development</li>
+                                    <li>Clinical Trials and Data Analysis</li>
+                                    <li>Pharmacovigilance and Drug Safety</li>
+                                    <li>Pharmacokinetics and Pharmacodynamics</li>
+                                    <li>Data Mining and Machine Learning</li>
+                                    <li>Text Mining and Natural Language Processing (NLP)</li>
+                                    <li>Database Management</li>
+                                    <li>AI Tools</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li>Patient-Centricity</li>
+                                    <li>Ethical and Responsible AI</li>
+                                    <li>Continuous Innovation</li>
+                                    <li>Accessibility and Affordability</li>
+                                    <li>Patient-Centricity</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!------------------------------------------ DOCTORS -------------------------------------->
+            <div id="Doctors">
+                <div class="container">
+                    <h1 class="sub-title">Developers</h1>
+                    <div class="work-list">
+                        <div class="work">
+                            <img src="static/pp56.jpeg">
+                            <div class="layer">
+                                <h3>Pratik Pradhan</h3>
+                                <h4>pp3406478@gmail.com</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="static/ppp2.jpg">
+                            <div class="layer">
+                                <h3>Srushti Gawai</h3>
+                                <h4>gawaisrushti@gmail.com</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="static/ppp3.jpg">
+                            <div class="layer">
+                                <h3>Vedashree Lasure</h3>
+                                <h4>lasurevedashree@gmail.com</h4>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="static/pp4.png">
+                            <!-- Add another doctor photo here -->
+                            <div class="layer">
+                                <h3>Sakshi Sanap</h3>
+                                <h4>sanapsakshi12345@gmail.com</h4>
+                                <!-- Add another title here -->
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn">See more</a>
+                </div>
+            </div>
+
+            <!--------------------------------- CONTACT ---------------------------------------->
+            <div id="contact">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="contact-right">
+                            <form name="t" action="/contact" method="POST">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                                <input type="email" name="email" placeholder="Your Email" required>
+                                <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                                <button type="submit" name="submit" class="btn btn2">Submit</button>
+                            </form>
+                            <span id="msg"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>copyright &copy;Pharma AI<i> | </i>All rights reserved </p>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+            var sidmue = document.getElementById("sidemenue");
+
+            function openmenue() {
+                sidmue.style.right = "0";
+            }
+
+            function closemenue() {
+                sidmue.style.right = "-150px";
+            }
+
+            // JavaScript to manage marquee text scrolling
+            const marqueeText = document.querySelector('.marquee .marquee-text');
+            const marqueeContainer = document.querySelector('.marquee-container');
+            const marqueeWidth = marqueeText.offsetWidth;
+
+            let currentPosition = 0;
+
+            function startMarquee() {
+                marqueeText.style.transform = `translateX(${currentPosition}px)`;
+                currentPosition--;
+
+                if (currentPosition < -marqueeWidth) {
+                    currentPosition = marqueeContainer.offsetWidth;
+                }
+
+                requestAnimationFrame(startMarquee);
+            }
+
+            startMarquee();
+        </script>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycby62N5eNzG06XIWTUYsp2IllBKIfKx-77X0JuyRzLHthF9p5bgLHHaHn-OJGl17mCmqRQ/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => {
+                        msg.innerHTML = "message send successfully"
+                        setTimeout(function () {
+                            msg.innerHTML = ""
+                        }, 5000)
+                        form.reset()
+                    })
+                    .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+
+</body>
+
+</html>

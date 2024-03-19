@@ -1,0 +1,238 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.webmedconsult</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://kit.fontawesome.com/382c9e01c9.js" crossorigin="anonymous"></script>
+    
+    <style>
+        /* Style for clickable containers */
+        .clickable-container {
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .clickable-container:hover {
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="services">
+        <div class="container">
+            
+            <div class="services-list">
+                <a href="/ddd">
+                    <div>
+                        <h2>Drug Discovery and Development:</h2>
+                        <p></p>
+                        <span>Free To Use</span>
+                    </div>
+                </a>
+                <a href="/ctda">
+                    <div>
+                        <h2>Clinical Trials and Data Analysis:</h2>
+                        <p></p>
+                        <span>Free To Use</span>
+                    </div>
+                </a>
+                <a href="/pds">
+                    <div>
+                        <h2>Pharmacovigilance and Drug Safety:</h2>
+                        <p></p>
+                        <span>Free To Use</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+           
+            <div class="services-list">
+                <a href="/pp">
+                    <div>
+                        <h2>Pharmacokinetics and Pharmacodynamics:</h2>
+                        <p></p>
+                        <span>Free To Use</span>
+                    </div>
+                </a>
+                <a href="/dmml">
+                    <div>
+                        <h2>Data Mining and Machine Learning:</h2>
+                        <p></p>
+                        <span>Free To Use</span>
+                    </div>
+                </a>
+                <a href="/tmnlp">
+                    <div>
+                        <h2>Text Mining and Natural Language Processing</h2>
+                        <p></p>
+                        <span>Free To Use</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+           
+            <div class="services-list">
+                <a href="/dm">
+                    <div>
+                        <h2>Database Management</h2>
+                        <p></p>
+                        <span>Free To Use</span>
+                    </div>
+                </a>
+                <a href="/ai">
+                    <div>
+                        <h2>AI Tools for Research and academics</h2>
+                        <p></p>
+                        <span>Free To Use</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function redirectToNew(route) {
+            window.location.href = route;
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images in Boxes</title>
+    <style>
+        .image-container {
+            border: 2px solid #ccc;
+            padding: 10px;
+            margin: 0;
+            box-sizing: border-box; /* Ensure padding doesn't increase the width */
+            float: left;
+            width: calc(25% - 20px); /* Each box takes up approximately one-fourth of the width */
+            margin-right: 20px; /* Adjust margin between boxes */
+            transition: background-color 0.3s; /* Add transition for smooth effect */
+            cursor: pointer; /* Add cursor pointer to indicate clickable */
+        }
+
+        .image-container:hover {
+            background-color: #f0f0f0; /* Change background color on hover */
+        }
+
+        .image-container.clicked {
+            background-color: #ffc107; /* Change background color when clicked */
+        }
+
+        .image-container:last-child {
+            margin-right: 0; /* Remove margin from the last box to prevent extra space */
+        }
+
+        .image-container img {
+            max-width: 100%; /* Ensure images are responsive */
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Center images horizontally */
+        }
+
+        @media only screen and (max-width: 600px) {
+            .image-container {
+                width: 100%; /* Each box takes up 100% of the width on smaller screens */
+                margin-right: 0; /* Reset margin for smaller screens */
+                margin-bottom: 20px; /* Add margin between rows */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="image-container" onclick="toggleClicked(this)">
+    <a href="{{ url_for('ddd') }}">
+        <img src="static/ddd.png" alt="Image 1">
+    </a>
+</div>
+
+<div class="image-container" onclick="toggleClicked(this)">
+    <a href="{{ url_for('pds') }}">
+        <img src="static/pds.png" alt="Image 2">
+    </a>
+</div>
+
+<div class="image-container" onclick="toggleClicked(this)">
+    <a href="{{ url_for('ctda') }}">
+        <img src="static/ctda.png" alt="Image 3">
+    </a>
+</div>
+
+<div class="image-container" onclick="toggleClicked(this)">
+    <a href="{{ url_for('dm') }}">
+        <img src="static/dm.png" alt="Image 2">
+    </a>
+</div>
+
+<div class="image-container" onclick="toggleClicked(this)">
+    <a href="{{ url_for('dmml') }}">
+        <img src="static/dmml.png" alt="Image 3">
+    </a>
+</div>
+
+<div class="image-container" onclick="toggleClicked(this)">
+    <a href="{{ url_for('pp') }}">
+        <img src="static/pkpd.png" alt="Image 2">
+    </a>
+</div>
+
+<div class="image-container" onclick="toggleClicked(this)">
+    <a href="{{ url_for('tmnlp') }}">
+        <img src="static/tmnlp.png" alt="Image 3">
+    </a>
+</div>
+
+
+
+<div class="image-container" onclick="toggleClicked(this)">
+    <a href="{{ url_for('pc') }}">
+        <img src="static/pc.png" alt="Image 2">
+    </a>
+</div>
+<br><br><br>
+
+
+<center>
+    <hr><h1>AI Tools</h1><hr></center>
+    <div class="image-container" onclick="toggleClicked(this)" style="display: flex; justify-content: center; align-items: center;">
+        <center><a href="{{ url_for('ai') }}">
+            <img src="static/30.png" alt="Image 2" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        </a></center>
+    </div>
+    
+    
+    
+
+<script>
+    function toggleClicked(element) {
+        element.classList.toggle('clicked');
+    }
+</script>
+
+</body>
+</html>
+

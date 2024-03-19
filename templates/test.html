@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images in Boxes</title>
+    <style>
+        .image-container {
+            border: 2px solid #ccc;
+            padding: 10px;
+            margin: 0;
+            box-sizing: border-box; /* Ensure padding doesn't increase the width */
+            float: left;
+            width: calc(33.33% - 20px); /* Each box takes up approximately one-third of the width */
+            margin-right: 20px; /* Adjust margin between boxes */
+            transition: background-color 0.3s; /* Add transition for smooth effect */
+            cursor: pointer; /* Add cursor pointer to indicate clickable */
+        }
+
+        .image-container:hover {
+            background-color: #f0f0f0; /* Change background color on hover */
+        }
+
+        .image-container.clicked {
+            background-color: #ffc107; /* Change background color when clicked */
+        }
+
+        .image-container:last-child {
+            margin-right: 0; /* Remove margin from the last box to prevent extra space */
+        }
+
+        .image-container img {
+            max-width: 100%; /* Ensure images are responsive */
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Center images horizontally */
+        }
+
+        @media only screen and (max-width: 600px) {
+            .image-container {
+                width: 100%; /* Each box takes up 100% of the width on smaller screens */
+                margin-right: 0; /* Reset margin for smaller screens */
+                margin-bottom: 20px; /* Add margin between rows */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="image-container" onclick="toggleClicked(this)">
+    <a href="{{ url_for('image1') }}">
+        <img src="static/2.png" alt="Image 1">
+    </a>
+</div>
+
+<div class="image-container" onclick="toggleClicked(this)">
+    <a href="{{ url_for('image1') }}">
+        <img src="static/2.png" alt="Image 2">
+    </a>
+</div>
+
+<div class="image-container" onclick="toggleClicked(this)">
+    <a href="{{ url_for('image1') }}">
+        <img src="static/2.png" alt="Image 3">
+    </a>
+</div>
+
+<script>
+    function toggleClicked(element) {
+        element.classList.toggle('clicked');
+    }
+</script>
+
+</body>
+</html>
